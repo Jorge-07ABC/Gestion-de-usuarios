@@ -1,0 +1,346 @@
+/* --- Variables de Color y Estilos Base --- */
+:root {
+    --primary-dark: #002350;
+    --primary-blue: #2d6df6;
+    --bg-light: #f3f6f9;
+    --text-dark: #333333;
+    --text-muted: #7e8299;
+    --border-color: #eff2f5;
+    --status-active: #50cd89;
+    --status-inactive: #f1416c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Fredoka", sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Barra Lateral (Sidebar) --- */
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    min-height: 100vh;
+    flex-shrink: 0;
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.sidebar-header h2 {
+    font-size:100px
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.sidebar-header span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.sidebar-logo-box {
+    width: 120px;
+    height: 120px;
+    background-color: var(--primary-blue);
+    border-radius: 12px;
+    margin-top: 20px;
+    flex-shrink: 0; 
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-logo-box i {
+    position: relative;
+    color: #ffffff;
+    font-size: 90px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Contenido Principal --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra Superior */
+.top-navbar {
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.notification-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.notification-icon .badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--status-inactive);
+    border-radius: 50%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.user-profile .avatar {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.user-profile .user-role {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.user-profile .arrow {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* --- Sección de Contenido --- */
+.content-body {
+    padding: 30px;
+}
+
+.page-title-area {
+    margin-bottom: 25px;
+}
+
+.page-title-area h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #181c32;
+    margin-bottom: 5px;
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Contenedor de la Tabla */
+.table-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Herramientas de la tabla (Buscador y botón) */
+.table-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+    width: 260px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    border: 1px solid #e4e6ef;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.search-box input:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-blue);
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.btn-add {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #1b54d4;
+}
+
+/* --- Tabla --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+td {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: #464e5f;
+}
+
+/* Estados */
+.status {
+    font-weight: 500;
+}
+
+.status.active {
+    color: var(--status-active);
+}
+
+.status.inactive {
+    color: var(--status-inactive);
+}
+
+/* Acciones */
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.btn-edit {
+    color: #b5b5c3;
+}
+
+.btn-edit:hover {
+    color: var(--primary-blue);
+}
+
+.btn-delete {
+    color: #b5b5c3;
+}
+
+.btn-delete:hover {
+    color: var(--status-inactive);
+}
+
+/* --- Paginación --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.pagination button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #e4e6ef;
+    background-color: #ffffff;
+    border-radius: 6px;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.pagination button:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.pagination button.active {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border-color: var(--primary-blue);
+}
+
+.pagination .page-arrow {
+    color: var(--text-muted);
+}
+

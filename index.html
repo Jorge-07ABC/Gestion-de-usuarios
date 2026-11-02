@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAES COMMERCE - Gestión de Usuarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome para replicar los botones de acciones, lupa y notificaciones -->
+    <link rel="stylesheet" href="all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+    
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>SAES <br> <span>COMMERCE</span></h2>
+        </div>
+        <div class="sidebar-logo-box">
+          <i class="fa-solid fa-box-open"></i>
+         </div>
+    </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            
+            <!-- Barra Superior (Navbar) -->
+            <header class="top-navbar">
+                <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="user-menu">
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge"></span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="fa-solid fa-circle-user avatar"></i>
+                        <span class="user-role">Administrador</span>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Sección de Gestión de Usuarios -->
+            <section class="content-body">
+                <div class="page-title-area">
+                    <h1>Gestión de usuarios</h1>
+                    <p class="breadcrumbs">Inicio / Usuarios</p>
+                </div>
+
+                <!-- Contenedor Blanco de la Tabla y Filtros -->
+                <div class="table-container">
+                    
+                    <!-- Barra de Herramientas (Buscar y Agregar) -->
+                    <div class="table-tools">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar usuario...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <button class="btn-add">
+                            <i class="fa-solid fa-plus"></i> Agregar usuario
+                        </button>
+                    </div>
+
+                    <!-- Tabla de Usuarios -->
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre completo</th>
+                                    <th>Usuario</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Juan Pérez</td>
+                                    <td>jperez</td>
+                                    <td>Administrador</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>María Gómez</td>
+                                    <td>mgomez</td>
+                                    <td>Ventas</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Carlos Ruiz</td>
+                                    <td>cruiz</td>
+                                    <td>Logística</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Laura Martínez</td>
+                                    <td>lmartinez</td>
+                                    <td>Despacho</td>
+                                    <td><span class="status inactive">Inactivo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Andrés Díaz</td>
+                                    <td>adiaz</td>
+                                    <td>Inventarios</td>
+                                    <td><span class="status active">Activo</span></td>
+                                    <td class="actions">
+                                        <button class="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Paginación -->
+                    <div class="pagination">
+                        <button class="page-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="page-num active">1</button>
+                        <button class="page-num">2</button>
+                        <button class="page-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
